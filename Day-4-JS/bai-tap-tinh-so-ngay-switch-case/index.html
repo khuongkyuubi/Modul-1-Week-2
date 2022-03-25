@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="month">Nhập vào tháng:</label><br>
+    <input type="text" name="month" id="month">
+    <button type="submit" onclick="monthCalc()">Tính số ngày</button>
+    <p id="text"></p>
+<script>
+    function monthCalc() {
+        let month = document.getElementById("month").value;
+        switch (1 * month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("text").innerHTML = `Tháng ${month} có 31 ngày `;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("text").innerHTML = `Tháng ${month} có 30 ngày `;
+                break;
+            case 2:
+                document.getElementById("text").innerHTML = `Tháng ${month} có 28 ngày `;
+                break;
+            default:
+                document.getElementById("text").innerHTML = `Tháng ${month} không tồn tại`;
+        }
+    }
+</script>
+</body>
+</html>
