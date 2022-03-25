@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let value = 1*prompt('Type a number', 0);
+    let test = value < 0 ; // biến trung gian
+    switch (value) {
+        case 0:
+            alert(0);
+            break;
+        default:
+            switch (test) {  // xét trường hợp của test
+                case true:
+                    alert(-1);
+                    break;
+                default:
+                    alert(1);
+            }
+    }
+</script>
+</body>
+</html>
