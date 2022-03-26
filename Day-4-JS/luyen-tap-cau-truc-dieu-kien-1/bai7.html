@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Cước phí tăng theo bậc thang
+    // 50 phút đầu 1000đ/ph
+    // 50 phút tiếp 1200đ/ph
+    //50 phút tiếp 1500đ/ph
+    // 50 phút tiếp 2000đ/ph
+    // từ phút thứ 201 trở đi 3000đ/ph
+    let phutGoi = parseInt(prompt("Nhập vào số phút gọi (số nguyên):"));
+    let cuocPhi;
+    // for (let i = 0; i < 6; i++) {
+    //     phutGoi -= 50;
+    //     switch(i)
+    //     if (phutGoi < 50) {
+    //         break;
+    //     }
+    // }
+    //
+    if (phutGoi <= 50) {
+        cuocPhi = 1000*phutGoi;
+    } else if (phutGoi <= 100) {
+        cuocPhi = 50*1000 + 1200*(phutGoi - 50);
+    } else if (phutGoi <= 150) {
+        cuocPhi = 50*1000 + 50*1200 + 1500*(phutGoi - 100);
+    } else if (phutGoi <= 200) {
+        cuocPhi = 50*1000 + 50*1200 + 1500*50 + 2000*(phutGoi - 150);
+    } else  if (phutGoi <= 200) {
+        cuocPhi = 50*1000 + 50*1200 + 1500*50 + 2000*50 + 2500*(phutGoi - 200);
+    }else {
+        cuocPhi = 50*1000 + 50*1200 + 1500*50 + 2000*50 + 2500*50 + 3000*(phutGoi - 250);
+    }
+    document.write(`Cước phí cho ${phutGoi} phút gọi là : ${cuocPhi} đồng`)
+</script>
+</html>

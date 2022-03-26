@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let diemGiuaKy, diemCuoiKy, diemKiemTra, trungBinh;
+    do {
+        diemGiuaKy = parseInt(prompt("Nhập vào điểm giữa kỳ (số nguyên) "));
+    }
+    while (diemGiuaKy > 10 || diemGiuaKy < 0 || isNaN(diemGiuaKy));
+    do {
+        diemKiemTra = parseInt(prompt("Nhập vào kiểm tra (số nguyên) "));
+    }
+    while (diemKiemTra > 10 || diemKiemTra < 0 || isNaN(diemKiemTra)) ;
+    do {
+        diemCuoiKy = parseInt(prompt("Nhập vào cuối kỳ (số nguyên) "));
+    }
+    while (diemCuoiKy > 10 || diemCuoiKy < 0 || isNaN(diemKiemTra));
+    trungBinh = diemKiemTra * 0.1 + diemGiuaKy * 0.3 + diemCuoiKy * 0.6; // hệ số 1:3:6
+
+    if (trungBinh >= 8) {
+        document.write(`Diểm trung bình là :${trungBinh} <br> Xếp loại giỏi`);
+    } else if (trungBinh >= 6.5) {
+        document.write(`Diểm trung bình là :${trungBinh} <br> Xếp loại khá`);
+    } else if (trungBinh >= 5) {
+        document.write(`Diểm trung bình là :${trungBinh} <br> Xếp loại trung bình`);
+    } else if (trungBinh >= 8) {
+        document.write(`Diểm trung bình là :${trungBinh} <br> Xếp loại giỏi`);
+    }
+
+</script>
+</body>
+</html>
