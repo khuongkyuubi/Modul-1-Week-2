@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me?</title>
+</head>
+<body>
+<div style="text-align: center">
+    <h2>Do You Love Me?</h2>
+    <button type="submit" onclick="alert('<3')">Yes</button>
+    <button type="submit" onmouseover="moveButton()" id="no">No</button>
+</div>
+<script>
+    function moveButton() {
+        let noButton = document.getElementById("no");
+        let browserHeight = window.innerHeight;
+        let browserWidth = window.innerWidth;
+        noButton.style.position = "relative";
+        let randomPoisitionLeft = Math.random() * browserHeight / 2;
+        let randomPoisitionTop = Math.random() * browserWidth / 2;
+        noButton.style.left = randomPoisitionLeft + "px";
+        noButton.style.top = randomPoisitionTop + "px";
+    }
+</script>
+</body>
+</html>
