@@ -1,0 +1,36 @@
+* {
+    font-family: arial, sans-serif;
+}
+table {
+    /*width: 400px;*/
+    /*height: 500px;*/
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+p {
+    margin: 0;
+}
+table th, td {
+    /*border: 1px solid;*/
+    height: 75px;
+    width: 100px;
+    text-align: center;
+}
+#displayBorder {
+    margin: auto;
+    width: 96%;
+    height: 90%;
+    border: 1px solid;
+}
+th {
+    text-align: right !important;
+    font-size: 50px;
+    font-weight: normal;
+
+}
+button {
+    width: 80%;
+    height: 80%;
+    font-size: 40px;
+}
