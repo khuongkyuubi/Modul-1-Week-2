@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    /**
+     * Cách làm với for lồng nhau
+     * */
+        // coi vòng lặp thứ nhất là hàng
+        // vòng lặp thứ 2 sẽ là mỗi cột tương ứng
+    let table = `<p>Dùng for lồng nhau</p><table style="border-collapse: collapse">`
+    for (let i = 1; i <= 10; i++) {
+        table += `<tr>`
+        for (let j = 1; j <= 10; j++) {
+            table += `<td style="border: 1px solid;">${j * i}</td>`
+        }
+        table += "</tr>"
+    }
+    table += "</table>"
+    document.write(table);
+
+    /**
+     * Cách làm với while lồng nhau
+     * */
+    let table2 = `<p>Dùng while lồng nhau</p><table style="border-collapse: collapse">`;
+    let i = 1;
+    let j = 1;
+    while (i <= 10) {
+        table2 += `<tr>`
+        while (j <= 10) {
+            table2 += `<td style="border: 1px solid;">${j * i}</td>`;
+            j++;
+        }
+        ;
+        table2 += "</tr>";
+        i++;
+        j = 1; // sau vòng while thứ 2, j  đã = 10, nên cần gán lại j = 1 để lặp lại
+    }
+    ;
+    table2 += "</table>"
+    document.write(table2);
+
+</script>
+</html>
