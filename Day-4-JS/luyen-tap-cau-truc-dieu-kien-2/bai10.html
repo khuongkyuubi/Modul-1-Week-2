@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+// let luongDien = parseInt(prompt("Nhập vào lượng điện: "));
+let luongDien = 260;
+let donGia = [3000,3300,3700,4200];
+let giaDien = 0;
+for (let i = 0; i < donGia.length; i++) {
+    // lặp qua từng mức đơn giá
+    if (luongDien <= 50) {
+        //Nếu lượng điện nhỏ hơn 50 thì lấy luôn . sau đấy trừ bớt 50 để nó < 0
+        // để không bị trùng vào trường hợp sau các lần lặp sẽ dư ra phần lớn hơn
+        giaDien += donGia[i] * luongDien;
+        luongDien -= 50;
+        break;
+    } else {
+        giaDien += 50* donGia[i]
+        // sau mỗi lần trừ lượng điện đi 50 rồi lặp lại
+        luongDien -= 50;
+    }
+}
+console.log(luongDien);
+let n = donGia.length - 1
+if (luongDien > 0) {
+    giaDien += luongDien * donGia[n];
+}
+document.write(giaDien);
+</script>
+</html>

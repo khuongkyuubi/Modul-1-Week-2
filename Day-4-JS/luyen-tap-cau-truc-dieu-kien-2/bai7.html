@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    document.write("giải phương trình ax" + "<sup>2</sup>" + "+ bx + c = 0" +"<br>" );
+    let a = 1 * prompt("Nhập vào a (số): ");
+    let b = 1 * prompt("Nhập vào b (số): ");
+    let c = 1 * prompt("Nhập vào c (số): ");
+    let x1,x2;
+    let delta = b ** 2 - 4 * a * c;
+    let pt = `phương trình ${a}<sup>2</sup> + ${b}x + ${c}  = 0`;
+    if (a == 0) {
+        if (b == 0) {
+            if (c == 0) {
+                document.write(`${pt}  có vô số nghiệm `);
+            } else {
+                document.write(`${pt} vô nghiệm `);
+            }
+        } else {
+            x1 = x2 = -c / b;
+            document.write(`${pt} có nghiệm x = ${x1} `);
+        }
+    } else {
+        if (delta < 0) {
+            document.write(`${pt} vô nghiệm`);
+        } else {
+            x1 = (-b + Math.sqrt(delta)) / (2*a);
+            x2 = (-b - Math.sqrt(delta)) / (2*a);
+            document.write(`${pt} có nghiệm ${x1} và ${x2}`);
+        }
+    }
+
+</script>
+</html>

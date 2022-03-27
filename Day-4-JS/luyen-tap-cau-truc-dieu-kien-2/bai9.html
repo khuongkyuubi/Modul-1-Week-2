@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = 1 * prompt("Nhập vào cạnh a (số): ");
+    let b = 1 * prompt("Nhập vào cạnh b (số): ");
+    let c = 1 * prompt("Nhập vào cạnh c (số): ");
+    let triangle;
+    if (a <= 0 || b <= 0 || c <= 0) {
+        triangle = false;
+    } else if (a + b < c) {
+        triangle = false;
+    } else if (b + c < a) {
+        triangle = false;
+    } else if (a + c < b) {
+        triangle = false;
+    } else {
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+            document.write("Bạn nhập không đúng giá trị <br>");
+            triangle = false;
+        } else {
+            triangle = true;
+        }
+
+    }
+    if (triangle) {
+        document.write(`${a}, ${b}, ${c} Là cạnh tam giác`);
+    } else {
+        document.write(`${a}, ${b}, ${c} Không là cạnh tam giác`);
+    }
+
+</script>
+</html>

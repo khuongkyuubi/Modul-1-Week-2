@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    let luong = +prompt("Nhập vào lương (triệu): ");
+    let nguoiPhuThuoc = parseInt(prompt("Nhập vào số người phụ thuộc", 0));
+    nguoiPhuThuoc *= 4.4;
+    console.log(nguoiPhuThuoc);11
+    let bhXH = luong * 10.5 / 100;
+    const giamTruCaNhan = 11;11
+    let thueTNCN;
+    let tienTinhThue = luong - giamTruCaNhan - nguoiPhuThuoc - bhXH;
+    console.log(tienTinhThue);11
+    if (tienTinhThue <= 0) {
+
+        document.write("Bạn chưa phải đóng thuế thu nhập cá nhân");
+    } else {
+        if (tienTinhThue <= 5) {
+            thueTNCN = tienTinhThue * 5 / 100;
+        } else if (tienTinhThue <= 10) {
+            thueTNCN = tienTinhThue * 10 / 100 - 0.25;
+        } else if (tienTinhThue <= 18) {
+            thueTNCN = tienTinhThue * 15 / 100 - 0.75;
+        } else if (tienTinhThue <= 32) {
+            thueTNCN = tienTinhThue * 20 / 100 - 1.65;
+        } else if (tienTinhThue <= 52) {
+            thueTNCN = tienTinhThue * 25 / 100 - 3.25;
+        } else if (tienTinhThue <= 80) {
+            thueTNCN = tienTinhThue * 30 / 100 - 5.85;
+        } else {
+            thueTNCN = tienTinhThue * 35 / 100 - 9.85;
+        }
+        document.write(`Mức thuế bạn phải đóng là: ${thueTNCN.toFixed(4)*10**6} VNĐ`);
+    }
+
+</script>
+</html>
